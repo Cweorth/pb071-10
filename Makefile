@@ -5,11 +5,11 @@ all:
 	@echo -e "    \e[94mmake \e[1mtest\e[0m  compile and run tests"
 
 run: build/Makefile
-	@$(MAKE) -C build playground
+	@$(MAKE) -q -C build playground
 	@cd build ; ./playground
 
 test: build/Makefile
-	@$(MAKE) -C build tests
+	@$(MAKE) -q -C build tests
 	@cd build ; ./tests
 
 build/Makefile:
